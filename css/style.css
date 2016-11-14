@@ -1,6 +1,7 @@
 @import url(/css/reset.css);
 
 body {
+    color: #1289a7;
     font-family: Tahoma;
     background-image: url("/img/background.jpg");
     height: 100%;
@@ -15,11 +16,12 @@ body {
 
 .mainblock {
     width: 1000px;
-    height: 988px;
+    height: 989px;
     background-color: aliceblue;
     -webkit-box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.23);
     -moz-box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.23);
     box-shadow: 0px 2px 5px 5px rgba(0,0,0,0.23);
+    float: left;
 }
 
 .header {
@@ -27,6 +29,126 @@ body {
     width: 1000px;
     background-color: white;
 }
+
+.logo {
+    height: 164px;
+    width: 283px;
+    float: left;
+    background-image: url("/img/logo.png");
+    margin-top: 11px;
+    margin-left: 28px;
+    cursor: pointer;
+}
+
+.logotext {
+    font-size: 12px;
+    text-indent: -25px;
+    line-height: 200px;
+}
+
+.contacts {
+    float: right;
+    margin-top: 9px;
+    margin-right: 33px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.contacts a {
+    cursor: pointer;
+    color: #128aa7;
+    text-decoration: none;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+.flags {
+    float: right;
+    height: 42px;
+    width: 370px;
+    margin-top: 110px;
+    margin-right: -127px;
+    font-size: 10px;
+    text-decoration: none;
+    /*background-color: red;*/
+}
+
+.fl {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+.fl li {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-image: url("/img/flags.png");
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.ind {
+    background-position: 0 0;
+}
+
+.nep {
+    background-position: -42px 0;
+}
+
+.tib {
+    background-position: -84px -84px;
+}
+
+.but {
+    background-position: 0 -42px;
+}
+
+.shr {
+    background-position: -42px -42px;
+}
+
+.mal {
+    background-position: 42px 42px;
+}
+
+.country {
+    float: right;
+    height: 12px;
+    width: 406px;
+    margin-top: 155px;
+    margin-right: -385px;
+    font-size: 10px;
+   /* background-color: yellow;*/
+}
+
+.count {
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.count li {
+    display: inline-block;
+    height: 15px;
+    width: 55px;
+    padding: 0 1.6px;
+    cursor: pointer;
+}
+
+.count a {
+    color: #128aa7;
+    text-decoration: none;
+}
+
+.count a:hover {
+    text-decoration: underline;
+}
+
+/*-- Фото основного блока --*/
 
 .photo {
     height: 237px;
@@ -36,9 +158,13 @@ body {
     border-bottom: solid 1px #128aa7;
 }
 
+/*-- Горизонтальное меню --*/
+
 .nav {
     height: 28px;
-    width: 1000px;
+    width: 100%;
+    float: left;
+    list-style: none;
     border-top: solid 1px #cacbcb;
     border-bottom: solid 1px #000000;
     background-color: #343434;
@@ -46,7 +172,48 @@ body {
     -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
     box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
     position: relative;
+}
 
+.nav li {
+    height: 29px;
+    list-style: none;
+}
+
+.nav > ul > li{
+    float: left;
+    width: 140px;
+    position: relative;
+}
+
+.nav li a{
+    display: block;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav li a:hover{
+      text-decoration: underline;
+}
+
+.nav li .submenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+.nav li:hover .submenu{
+    display: block;
+}
+
+.nav li li{
+    width: 140px;
+    background-color: #343434;
+    /*-webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);*/
 }
 
 .leftmenu {
@@ -56,7 +223,21 @@ body {
     background-color: #eceef0;
     border-left: solid 1px #c7cacf;
     border-right: solid 1px #c7cacf;
+    color: #414b43;
+    font-size: 14px;
+    line-height: 24px;
 
+}
+
+.leftmenu ul {
+    margin-left: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 8px;
 }
 
 .section {
@@ -65,7 +246,6 @@ body {
     margin: 0 auto;
     float: left;
     background-color: #ffffff;
-
 }
 
 .rightmenu {
@@ -75,6 +255,13 @@ body {
     background-color: #eceef0;
     border-left: solid 1px #c7cacf;
     border-right: solid 1px #c7cacf;
+    color: #414b43;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.rightmenu ul {
+    margin-left: 15px;
 }
 
 .footer {
@@ -82,6 +269,9 @@ body {
     width: 1000px;
     margin: 0 auto;
     clear: both;
+}
+
+.copyright {
     opacity: .8; /* layer alpha */
     color: #fff; /* text color */
     font-size: 12px;
