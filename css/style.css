@@ -177,6 +177,8 @@ body {
 .nav li {
     height: 29px;
     list-style: none;
+    /*padding-right: 20px;
+    position: relative;*/
 }
 
 .nav > ul > li{
@@ -208,6 +210,14 @@ body {
     display: block;
 }
 
+.submenu {
+    background-color: #343434;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
+    box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.8);
+}
+
+
 .nav li li{
     width: 140px;
     background-color: #343434;
@@ -226,6 +236,7 @@ body {
     color: #414b43;
     font-size: 14px;
     line-height: 24px;
+    overflow: hidden;
 
 }
 
@@ -258,11 +269,15 @@ p {
     color: #414b43;
     font-size: 14px;
     line-height: 24px;
+    overflow: hidden;
+    word-wrap: break-word;
+
 }
 
 .rightmenu ul {
     margin-left: 15px;
 }
+
 
 .footer {
     height: 34px;
